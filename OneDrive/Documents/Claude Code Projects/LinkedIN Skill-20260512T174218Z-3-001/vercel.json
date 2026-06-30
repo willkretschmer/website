@@ -1,12 +1,11 @@
 {
-  "buildCommand": "echo 'Static site'",
-  "outputDirectory": "./",
-  "public": false,
-  "routes": [
+  "builds": [
     {
-      "src": "/",
-      "dest": "/index.html"
-    },
+      "src": "index.html",
+      "use": "@vercel/static"
+    }
+  ],
+  "routes": [
     {
       "src": "/(.*)",
       "dest": "/index.html"
